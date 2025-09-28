@@ -1,0 +1,50 @@
+/* Fondo general */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('assets/fondo_menu.png');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Press Start 2P', monospace;
+  color: white;
+  text-align: center;
+}
+
+/* Contenedor del menú */
+#menu {
+  padding-top: 50px;
+}
+
+/* Título del juego */
+h1 {
+  font-size: 32px;
+  color: yellow;
+  text-shadow: 2px 2px red;
+  margin-bottom: 40px;
+}
+
+/* Lista de botones */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+/* Botones del menú */
+li {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid yellow;
+  padding: 12px 24px;
+  margin: 10px 0;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+/* Efecto al pasar el cursor */
+li:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 0, 0.3);
+  color: cyan;
+}
