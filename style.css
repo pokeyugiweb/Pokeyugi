@@ -5,7 +5,8 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url('fondo_menu.webp'); /* ← Aquí va tu imagen con el título incluido */
+  min-height: 100vh; /* ← Esto asegura que el fondo cubra toda la pantalla */
+  background-image: url('assets/fondo_menu.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
