@@ -1,13 +1,14 @@
-/* Fuente retro (puedes agregarla desde Google Fonts si quieres) */
+/* Fuente retro (opcional desde Google Fonts) */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 /* Fondo general */
 body {
   margin: 0;
   padding: 0;
-  background-image: url('assets/fondo_menu.png');
+  background-image: url('assets/fondo_menu.png'); /* ← Aquí va tu imagen con el título incluido */
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   font-family: 'Press Start 2P', monospace;
   color: white;
   text-align: center;
@@ -15,17 +16,8 @@ body {
 
 /* Contenedor del menú */
 #menu {
-  padding-top: 50px;
+  padding-top: 180px; /* ← Ajusta esto si el título en la imagen está muy arriba */
   animation: fadeIn 1s ease-in-out;
-}
-
-/* Título del juego */
-h1 {
-  font-size: 32px;
-  color: yellow;
-  text-shadow: 2px 2px red;
-  margin-bottom: 40px;
-  animation: slideDown 0.8s ease-out;
 }
 
 /* Lista de botones */
@@ -61,11 +53,6 @@ li:hover {
   to { opacity: 1; }
 }
 
-@keyframes slideDown {
-  from { transform: translateY(-30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
 @keyframes fadeInUp {
   from { transform: translateY(20px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
@@ -73,10 +60,6 @@ li:hover {
 
 /* Adaptación para pantallas pequeñas */
 @media screen and (max-width: 600px) {
-  h1 {
-    font-size: 24px;
-  }
-
   li {
     font-size: 12px;
     padding: 10px 16px;
@@ -84,7 +67,7 @@ li:hover {
   }
 
   #menu {
-    padding-top: 30px;
+    padding-top: 120px; /* ← Ajusta según la posición del título en tu imagen */
   }
 
   ul {
