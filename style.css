@@ -1,3 +1,6 @@
+/* Fuente retro (puedes agregarla desde Google Fonts si quieres) */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 /* Fondo general */
 body {
   margin: 0;
@@ -13,6 +16,7 @@ body {
 /* Contenedor del menú */
 #menu {
   padding-top: 50px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 /* Título del juego */
@@ -21,6 +25,7 @@ h1 {
   color: yellow;
   text-shadow: 2px 2px red;
   margin-bottom: 40px;
+  animation: slideDown 0.8s ease-out;
 }
 
 /* Lista de botones */
@@ -40,6 +45,7 @@ li {
   cursor: pointer;
   font-size: 14px;
   transition: transform 0.2s, background-color 0.3s;
+  animation: fadeInUp 0.5s ease forwards;
 }
 
 /* Efecto al pasar el cursor */
@@ -47,4 +53,41 @@ li:hover {
   transform: scale(1.05);
   background-color: rgba(255, 255, 0, 0.3);
   color: cyan;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Adaptación para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  li {
+    font-size: 12px;
+    padding: 10px 16px;
+    margin: 8px 0;
+  }
+
+  #menu {
+    padding-top: 30px;
+  }
+
+  ul {
+    width: 90%;
+  }
 }
